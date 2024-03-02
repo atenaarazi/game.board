@@ -37,13 +37,17 @@ const alienInvaders = [
           if (currentShooterIndex % width !==0) currentShooterIndex -=1
           break
           case 'ArrowRight' :
-            if (currentShooterIndex % width !==0) currentShooterIndex -=1
-            currentShooterIndex +=1
+           if (currentShooterIndex % width < width - 1) currentShooterIndex +=1
             break
     }
     squares[currentShooterIndex].classList.add('shooter')
 
-} 
+ 
 
 document.addEventListener('keydown',moveShooter)
 
+function moveInvaders(){
+    const leftEdge = alienInvaders[0]
+}
+
+}
