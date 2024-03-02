@@ -65,7 +65,7 @@ function moveShooter(e) {
  if(leftEdge && !isGoingRight)
 {
     for (let i = 0; i < alienInvaders.length; i++){
-        alienInvaders[i] -= width - 1
+        alienInvaders[i] += width - 1
         direction = 1
         isGoingRight = true
 
@@ -80,7 +80,11 @@ for(let i = 0; i < alienInvaders.length; i++){
 
 
 
-    draw();
+    draw()
+    if( squares [currentShooterIndex].classList.contains('invader')){
+        resultsDisplay.innerHTML = 'GAME OVER'
+        clearInterval
+    }
   }
-  invadersId = setInterval(moveInvaders, 600);
+  invadersId = setInterval(moveInvaders, 600)
 }
