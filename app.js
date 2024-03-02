@@ -8,6 +8,7 @@ const aliensRemoved =[]
 
 for( let i = 0; i < width * width; i++){
     const square = document.createElement('div')
+    square.id = i
     grid.appendChild(square)
 }
 const squares = Array.from(document.querySelectorAll('.grid div'))
@@ -33,7 +34,16 @@ const alienInvaders = [
     squares[currentShooterIndex].classList.remove('shooter')
     switch(e.key) {
         case 'ArrowLeft' :
-          
+          if (currentShooterIndex % width !==0) currentShooterIndex -=1
+          break
+          case 'ArrowRight' :
+            if (currentShooterIndex % width !==0) currentShooterIndex -=1
+            currentShooterIndex +=1
+            break
     }
+    squares[currentShooterIndex].classList.add('shooter')
 
 } 
+
+document.addEventListener('keydown',moveShooter)
+
