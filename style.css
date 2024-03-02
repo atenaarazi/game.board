@@ -12,3 +12,18 @@
     border: solid 1px black;
     box-sizing: border-box;
 }
+.invader{
+    background-color: purple;
+    border-radius: 10px;
+}
+.shooter {
+    background-color: green;
+}
+
+.laser {
+    background-color: orange;
+}
+
+.boom {
+    background-color: red;
+}
