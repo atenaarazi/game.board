@@ -77,9 +77,29 @@ function moveShooter(e) {
 
     draw();
     if (squares[currentShooterIndex].classList.contains("invader")) {
-      resultsDisplay.innerHTML = "GAME OVER";
-      clearInterval;
+      resultsDisplay.innerHTML = 'GAME OVER';
+      clearInterval (invadersId);
+    }
+    if (aliensRemoved.length === alienInvanders.length){
+      resultsDisplay.innerHTML = 'YOU WIN'
+      clearInterval(invadersId)
     }
   }
-  invadersId = setInterval(moveInvaders, 600);
+  invadersId = setInterval(moveInvaders, 600)
+  
+  function shoot() {
+    let laserId
+    let currentLaserIndex = currentShooterIndex
+
+    function moveLaser(){
+      squares[currentLaserIndex].classList.remove('laser')
+      currentLaserIndex -= width
+      squares[currentLaserIndex].classList.add('laser')
+       
+     if(squares[])
+
+
+    }
+  }
+
 }
