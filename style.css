@@ -9,8 +9,6 @@
 .grid div{
     width: 20px;
     height: 20px;
-    border: solid 1px black;
-    box-sizing: border-box;
 }
 .invader{
     background-color: purple;
@@ -25,5 +23,5 @@
 }
 
 .boom {
-    background-color: red;
+    background-color: red ;
 }
